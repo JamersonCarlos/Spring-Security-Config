@@ -19,7 +19,7 @@ import jakarta.persistence.Table;
 @Table(name="users")
 public class User implements UserDetails {
 
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id; 
@@ -71,8 +71,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getUsername'");
+        return login;
     }
 
     public String getLogin() {
